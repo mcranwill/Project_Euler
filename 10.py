@@ -3,14 +3,22 @@
 # array of flags to denote whether a prime or not.
 iterator=0
 a=list(range(2,2000000))
+for even in a:
+	if(even % 2 == 0 and even > 2):
+		a.remove(even)
 for x in a:
     comp=[]
     for y in a:
         comp.append(x*y)
     for z in comp:
         if z in a:
+	    print(z)
             a.remove(z)
-print(a)
+	elif(z > a[-1]):
+	    break
 summation=0
-#for x in a:
-#	summation=summation+x
+for i in a:
+	summation=summation+i
+print(summation)
+if(len(a)>10001):
+	print(a[10000])
