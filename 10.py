@@ -12,13 +12,13 @@ for x in a:
         comp.append(x*y)
     for z in comp:
         if z in a:
-	    print(z)
-            a.remove(z)
+	    a.remove(z)
 	elif(z > a[-1]):
 	    break
 summation=0
 for i in a:
 	summation=summation+i
 print(summation)
+print(a)
 if(len(a)>10001):
-	print(a[10000])
+	print(a[10001])
